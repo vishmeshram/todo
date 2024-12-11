@@ -27,5 +27,34 @@ venv\Scripts\activate
 # For MacOS/Linux
 source venv/bin/activate
 
-# Install required dependencies
-pip install -r requirements.txt
+
+# Apply database migrations
+python manage.py migrate
+
+# Start the development server
+python manage.py runserver
+
+todo_project/
+├── tasks/
+│   ├── migrations/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── views.py
+│   ├── urls.py
+│   └── templates/
+│       
+│           ├── base.html
+│           ├── task_list.html
+│           └── add_task.html
+├── manage.py
+├── todo_project/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+└── requirements.txt
+
+
